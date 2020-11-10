@@ -2350,6 +2350,7 @@ input, select, textarea {
 					left: 50%;
 				}
 
+/* rajeesh: phone top bottom erased
 				.image.phone .inner:before {
 					top: -1.375em;
 					margin-left: -1em;
@@ -2367,6 +2368,7 @@ input, select, textarea {
 					border-radius: 100%;
 					border: solid 2px rgba(255, 255, 255, 0.25);
 				}
+*/
 
 			.image.phone:before, .image.phone:after {
 				content: '';
