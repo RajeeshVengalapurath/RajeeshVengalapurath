@@ -2770,7 +2770,8 @@ input, select, textarea {
 			width: 70%;
 		}
 
-			.spotlight .content > :last-child {
+/* rajeesh: disabled
+.spotlight .content > :last-child {
 				margin-bottom: 0;
 			}
 
@@ -2788,6 +2789,7 @@ input, select, textarea {
 			.spotlight:nth-child(2n) .content {
 				text-align: right;
 			}
+*/
 
 	@media screen and (max-width: 736px) and (orientation: landscape) {
 
