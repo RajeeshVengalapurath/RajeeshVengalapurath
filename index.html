@@ -151,7 +151,14 @@
 							</ul>
 						</div>
 						<br>
-					</section>					
+					</section>
+					
+					<section class="spotlight">
+						<div class="content">
+							<h3>Posts</h3>
+							<div id="postDiv"></div>
+						</div>
+					</section>
 
 					<!--
 					<section class="special">
@@ -533,6 +540,37 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				//.then(response => response.json())
 				.then(data => console.log(data));
 			</script>
+			
+			<script>				
+				async function loadPosts(){
+					var myHeaders = new Headers();
+					myHeaders.append('pragma', 'no-cache');
+					myHeaders.append('cache-control', 'no-cache'); //override json file caching
 
+					var myInit = {
+					method: 'GET',
+					headers: myHeaders,
+					};
+
+					const resp = await fetch('myblog/blog.json', myInit)
+					const data = await resp.json();
+
+					data.forEach(element => {
+						console.log(element.showOnHomePage)
+						if(element.showOnHomePage){
+							const date = new Date(element.dateAndTime);
+							const postMarkup = 
+								`<h4 style="text-align: start;">${element.title}</h4>
+								<p style="text-align: start;"><i>${date.getDay() + " " + date.toLocaleString('default', { month: 'short' }) + " " + date.getFullYear()}</i></p>`+
+								(element.hasImage ? `<img src="myblog/images/${element.postId}.jpg" style="max-width: 100%; max-height: 100%;">` : ``) +
+								`<p style="text-align: start;">${element.content}</p>`;
+							const postDivChild = document.createElement("div");
+							postDivChild.innerHTML = postMarkup;
+							document.getElementById("postDiv").appendChild(postDivChild)
+						}
+					});
+				}
+				loadPosts()
+			</script>
 	</body>
 </html>
