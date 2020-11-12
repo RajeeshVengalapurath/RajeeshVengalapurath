@@ -556,12 +556,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					const data = await resp.json();
 
 					data.forEach(element => {
-						console.log(element.showOnHomePage)
 						if(element.showOnHomePage){
 							const date = new Date(element.dateAndTime);
 							const postMarkup = 
 								`<h4 style="text-align: start;">${element.title}</h4>
-								<p style="text-align: start;"><i>${date.getDay() + " " + date.toLocaleString('default', { month: 'short' }) + " " + date.getFullYear()}</i></p>`+
+								<p style="text-align: start;"><i>${date.getDate() + " " + date.toLocaleString('default', { month: 'short' }) + " " + date.getFullYear()}</i></p>`+
 								(element.hasImage ? `<img src="myblog/images/${element.postId}.jpg" style="max-width: 100%; max-height: 100%;">` : ``) +
 								`<p style="text-align: start;">${element.content}</p>`;
 							const postDivChild = document.createElement("div");
