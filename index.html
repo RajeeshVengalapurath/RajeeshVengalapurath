@@ -54,11 +54,41 @@
 							<section>
 								<ul class="links">
 									<li>
-										<a href="#">
-											<h3>Posts</h3>
-											<p>None</p>
+										<a href="#skills">
+											<h3>Skills</h3>
 										</a>
-									</li>									
+									</li>
+									<li>
+										<a href="#badges">
+											<h3>Badges</h3>
+										</a>
+									</li>
+									<li>
+										<a href="#projects">
+											<h3>Projects</h3>
+										</a>
+									</li>
+									<li>
+										<a href="#notes">
+											<h3>My Notes</h3>
+										</a>
+									</li>
+									<li>
+										<a href="#codesamples">
+											<h3>Code Samples</h3>
+										</a>
+									</li>
+									<li>
+										<a href="#posts">
+											<h3>Posts</h3>
+										</a>
+									</li>
+									<li>
+										<a href="#posts">
+											<h3>Posts</h3>
+											<!--p>None</p-->
+										</a>
+									</li>
 								</ul>
 							</section>
 
@@ -76,7 +106,13 @@
 					<div id="main">
 
 						<!-- Post -->
-							<article class="post">
+						<article class="post">							
+							<a class="twitter-timeline" href="https://twitter.com/Vengalapurath?ref_src=twsrc%5Etfw" data-tweet-limit="1">
+What's New</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+						</article>
+						
+						<!-- Post -->
+							<article class="post" id="skills">
 								<header>
 									<div class="title">
 										<h2>Skills</h2>
@@ -104,7 +140,7 @@
 							</article>
 
 						<!-- Post -->
-						<article class="post">
+						<article class="post" id="badges">
 							<header>
 								<div class="title">
 									<h2>Badges</h2>
@@ -115,17 +151,17 @@
 						</article>
 
 						<!-- Post -->
-						<article class="post">
+						<article class="post" id="projects">
 							<header>
 								<div class="title">
-									<h2>My Project</h2>
+									<h2>Projects</h2>
 								</div>
 							</header>
 							<p><a href="http://www.raptoroid.com/">raptoroid.com</a></p>
 						</article>
 
 						<!-- Post -->
-						<article class="post">
+						<article class="post" id="notes">
 							<header>
 								<div class="title">
 									<h2>My Notes</h2>
@@ -147,7 +183,7 @@
 						</article>
 
 						<!-- Post -->
-						<article class="post">
+						<article class="post" id="codesamples">
 							<header>
 								<div class="title">
 									<h2>Code Samples</h2>
@@ -188,14 +224,9 @@
 						</article>
 						-->
 
-						<div id="rajeeshPostDiv">
+						<div id="posts">
 						
-						</div>
-
-						<!-- Post -->
-						<article class="post">							
-							<a class="twitter-timeline" href="https://twitter.com/Vengalapurath?ref_src=twsrc%5Etfw" data-tweet-limit="3">Tweets</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-						</article>
+						</div>						
 
 						<!-- Post -->
 						<!--
@@ -638,7 +669,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							`
 							const postDivChild = document.createElement("div");
 							postDivChild.innerHTML = postMarkup;
-							document.getElementById("rajeeshPostDiv").appendChild(postDivChild)
+							document.getElementById("posts").appendChild(postDivChild)
 						}
 					});
 				}
