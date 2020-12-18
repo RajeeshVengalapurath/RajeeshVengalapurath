@@ -8,62 +8,118 @@
 </head>
 <body>
 	<div id="menudiv">
+		<div class="menumastermodule">
+			<div class="menumaster">
+				<div class="menumastericon">
+					<img src="icons/menus/1.png" alt="">
+				</div>
+				<div class="menumastertext">
+					Menu Caption
+				</div>			
+			</div>
+			<div class="modules">
+				<div class="module">
+					<div class="moduleicon">
+						<img src="icons/modules/121.png" alt="">
+					</div>
+					<div class="moduletext">
+						<a href="">Menu Caption</a>						
+					</div>			
+				</div>
+				<div class="module">
+					<div class="moduleicon">
+						<img src="icons/modules/127.png" alt="">
+					</div>
+					<div class="moduletext">
+						<a href="">Menu Caption</a>
+					</div>			
+				</div>
+				<div class="module">
+					<div class="moduleicon">
+						<img src="icons/modules/report.png" alt="">
+					</div>
+					<div class="moduletext">
+						Reports
+					</div>
+				</div>
+				<div class="module reportmodule">
+					<div class="moduleicon">
+						<img src="icons/modules/report.png" alt="">
+					</div>
+					<div class="moduletext">
+						<a href="">Some Reports</a>
+					</div>
+				</div>
+				<div class="module reportmodule">
+					<div class="moduleicon">
+						<img src="icons/modules/report.png" alt="">
+					</div>
+					<div class="moduletext">
+						<a href="">Some Reports</a>
+					</div>
+				</div>
+			</div>
+		</div>		
+
+
+
+
+
+
+		<div class="menumastermodule">
+			<div class="menumaster">
+				<div class="menumastericon">
+					<img src="icons/menus/1.png" alt="">
+				</div>
+				<div class="menumastertext">
+					Menu Caption
+				</div>			
+			</div>
+			<div class="modules">
+				<div class="module">
+					<div class="moduleicon">
+						<img src="icons/modules/121.png" alt="">
+					</div>
+					<div class="moduletext">
+						<a href="">Menu Caption</a>						
+					</div>			
+				</div>
+				<div class="module">
+					<div class="moduleicon">
+						<img src="icons/modules/127.png" alt="">
+					</div>
+					<div class="moduletext">
+						<a href="">Menu Caption</a>
+					</div>			
+				</div>
+				<div class="module">
+					<div class="moduleicon">
+						<img src="icons/modules/report.png" alt="">
+					</div>
+					<div class="moduletext">
+						Reports
+					</div>
+				</div>
+				<div class="module reportmodule">
+					<div class="moduleicon">
+						<img src="icons/modules/report.png" alt="">
+					</div>
+					<div class="moduletext">
+						<a href="">Some Reports</a>
+					</div>
+				</div>
+				<div class="module reportmodule">
+					<div class="moduleicon">
+						<img src="icons/modules/report.png" alt="">
+					</div>
+					<div class="moduletext">
+						<a href="">Some Reports</a>
+					</div>
+				</div>
+			</div>
+		</div>		
 	</div>
 
-	<script>				
-		async function loadmenu(){
-			var myHeaders = new Headers();
-			myHeaders.append('pragma', 'no-cache');
-			myHeaders.append('cache-control', 'no-cache'); //override json file caching
-
-			var myInit = {
-			method: 'GET',
-			headers: myHeaders,
-			};
-
-			const resp = await fetch('raptoroid.json', myInit)
-			const json = await resp.json();
-
-			const applications = [
-				{no:3, name:"Inventory & Accounts Management System"},
-				{no:4, name:"Hotel & Resort Management Software"},
-				{no:8, name:"Hospital Management and Information System"},
-				{no:11, name:"Travel Agency Management System"}
-			]
-			const json_mainapplications = json.filter((item)=>{
-					return item.applicationno===3 || item.applicationno===4 || item.applicationno===11 || item.applicationno===8
-				})
-
-			//const applicationnos = [...new Set(json_mainapplications.map(x=>x.applicationno))]
-
-			applications.forEach(application => {
-				let markup = `<h1>${application.name}</h1>`;
-			
-				const json_underapplication = json_mainapplications.filter((item)=>{
-					return item.applicationno===application.no
-				})
-
-				const menunos = [...new Set(json_underapplication.map(x=>x.menuno))]
-				
-				menunos.forEach(menuno => {
-					markup += `<h2><img src="icons/menus/${menuno}.png" alt="">  ${json_underapplication.filter(x=>x.menuno===menuno)[0].menuname}</h2>`;
-					const modules = json_mainapplications.filter((item)=>{
-						return item.menuno===menuno
-					})
-
-					markup += `<ul>`
-					modules.forEach(module=>{
-						markup += `<li><img src="icons/modules/${module.moduleno}.png" alt="">  ${module.modulename}</li>`
-					})
-					markup += `</ul>`										
-				})
-
-				const postDivChild = document.createElement("div");
-				postDivChild.innerHTML = markup;
-				document.getElementById("menudiv").appendChild(postDivChild)
-			});
-		}
-		loadmenu()
-	</script>
+	
 </body>
 </html>
