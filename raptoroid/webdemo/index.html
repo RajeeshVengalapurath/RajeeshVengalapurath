@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="main.css">
+	<title>Document</title>
+</head>
+<body>
+	<div id="menudiv">
+	</div>
+
+	<script>				
+		async function loadmenu(){
+			var myHeaders = new Headers();
+			myHeaders.append('pragma', 'no-cache');
+			myHeaders.append('cache-control', 'no-cache'); //override json file caching
+
+			var myInit = {
+			method: 'GET',
+			headers: myHeaders,
+			};
+
+			const resp = await fetch('raptoroid.json', myInit)
+			const json = await resp.json();
+
+			const applications = [
+				{no:3, name:"Inventory & Accounts Management System"},
+				{no:4, name:"Hotel & Resort Management Software"},
+				{no:8, name:"Hospital Management and Information System"},
+				{no:11, name:"Travel Agency Management System"}
+			]
+			const json_mainapplications = json.filter((item)=>{
+					return item.applicationno===3 || item.applicationno===4 || item.applicationno===11 || item.applicationno===8
+				})
+
+			//const applicationnos = [...new Set(json_mainapplications.map(x=>x.applicationno))]
+
+			applications.forEach(application => {
+				let markup = `<h1>${application.name}</h1>`;
+			
+				const json_underapplication = json_mainapplications.filter((item)=>{
+					return item.applicationno===application.no
+				})
+
+				const menunos = [...new Set(json_underapplication.map(x=>x.menuno))]
+				
+				menunos.forEach(menuno => {
+					markup += `<h2><img src="icons/menus/${menuno}.png" alt="">  ${json_underapplication.filter(x=>x.menuno===menuno)[0].menuname}</h2>`;
+					const modules = json_mainapplications.filter((item)=>{
+						return item.menuno===menuno
+					})
+
+					markup += `<ul>`
+					modules.forEach(module=>{
+						markup += `<li><img src="icons/modules/${module.moduleno}.png" alt="">  ${module.modulename}</li>`
+					})
+					markup += `</ul>`										
+				})
+
+				const postDivChild = document.createElement("div");
+				postDivChild.innerHTML = markup;
+				document.getElementById("menudiv").appendChild(postDivChild)
+			});
+		}
+		loadmenu()
+	</script>
+</body>
+</html>
