@@ -16,7 +16,7 @@ body{
 }
 .grid-container{
     display: grid;
-    grid-template-columns: 274px auto;
+    grid-template-columns: 274px auto 274px;
     grid-template-rows: 65px auto 40px;
 
     /*full screen*/
@@ -27,10 +27,7 @@ body{
     right: 0;
     /*full screen end*/
 }
-.grid-item-logo
-{
-    border: 1px dotted black;
-}
+
 .grid-item-menu{
     overflow: scroll;
 
@@ -39,35 +36,25 @@ body{
     font-weight: normal;
 }
 .grid-item-content{
+    grid-column: 2/4;
     overflow: hidden; /*To fit the containing image*/
 }
 .grid-item-system{
-    grid-column: 1/3;
+    grid-column: 1/4;
     display: flex;
     background-color: rgb(245, 246, 248);
 }
 .grid-item-title{
     display: flex;
-    justify-content: space-between;
-}
-.logo{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.title{    
-    text-align: center;
-    height: 100%;
-    padding-left: 24px;
-
-    display: flex;
     align-items: center;
+
+    padding-left: 24px;
     
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 19px;
     font-weight: normal;
 }
-.subtitle{
+.grid-item-subtitle{
     padding-right: 24px;
     
     display: flex;
@@ -78,6 +65,11 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 12px;
     font-weight: normal;
+}
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .systembutton {
     width: 40px;
