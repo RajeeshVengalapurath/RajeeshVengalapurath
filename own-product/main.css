@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;    
+    /*border: 1px dotted black;*/
+}
+a:visited 
+{
+    color: black;
+}
+body{
+    margin: 0;
+}
+.perfectcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 274px auto 274px;
+    grid-template-rows: 65px auto 40px;
+
+    /*full screen*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    /*full screen end*/
+}
+
+.grid-item-menu{
+    overflow: scroll;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+.grid-item-content{
+    grid-column: 2/4;
+    overflow: hidden; /*To fit the containing image*/
+}
+.grid-item-system{
+    grid-column: 1/4;
+    display: flex;
+    background-color: rgb(245, 246, 248);
+}
+.grid-item-title{
+    display: flex;
+    align-items: center;
+
+    padding-left: 24px;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 19px;
+    font-weight: normal;
+}
+.grid-item-subtitle{
+    padding-right: 24px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.systembutton {
+    width: 40px;
+    height: 40px;
+    border: 0px;
+    background-color: rgb(245, 246, 248);
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+.systembutton:hover{
+    background-color: gainsboro;
+}
+.siglescreenshot{
+    /* to fit image: along with .grid-item-content{overflow: hidden;}*/
+    max-width: 100%;
+    max-height: 100%;
+}
+.menumastermodule{
+    margin-bottom: 16px;
+}
+.menumaster{
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+}
+.menumastericon{
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.modules{
+    display: flex;
+    flex-direction: column;
+}
+.module{
+    display: flex;
+    align-items: center;
+    padding-left: 18px;
+    padding-top: 3px;
+    padding-bottom: 3px;    
+}
+.reportmodule{
+    padding-left: 40px;
+}
+.moduleicon{
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.moduletext{
+    padding-left: 6px;
+    cursor: pointer;
+}
+.moduletext a{
+    text-decoration: none;
+}
