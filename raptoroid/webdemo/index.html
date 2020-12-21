@@ -3,16 +3,28 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="main.css?change_id=70">
+	<link rel="stylesheet" href="main.css?change_id=128">
 	<title>Document</title>
 </head>
 <body>
-	<div class="title">
-		<img class="logo" src="icons/raptoroidlogo.png" alt="Raptoroid Logo">
-	</div>
-	<div class="menucontent">
-		<div id="menu" class="menu">
-			
+	<div class="grid-container">
+        <div class="grid-item-logo">
+			<img class="logo" src="icons/raptoroidlogo.png" alt="Raptoroid Logo">
+		</div>
+        <div class="grid-item-title">
+			<div class="title">
+				© Rajeesh Vengalapurath
+			</div>
+			<div class="subtitle">
+				<div>
+					Software Developer (.NET Full Stack)
+				</div>
+				<div>
+					<a href="https://rajeeshvengalapurath.com/">rajeeshvengalapurath.com</a>
+				</div>
+			</div>			
+		</div>
+        <div class="grid-item-menu">
 			<div class="menumastermodule">
 				<div class="menumaster">
 					<div class="menumastericon">
@@ -4027,50 +4039,50 @@
 			
 			<!--Developer Menu End-->
 		</div>
-		<div id="content" class="content">
-			test
-		</div>		
-	</div>
-	<div class="system">
-		<button class="systembutton perfectcenter" onclick="ondemobuttonclick()">
-			<img src="icons/system/menu.png" alt="">
-		</button>
-		<button class="systembutton perfectcenter" onclick="ondemobuttonclick()">
-			<img src="icons/system/search2.png" alt="">
-		</button>
-		<button class="systembutton perfectcenter" onclick="ondemobuttonclick()">
-			<img src="icons/system/history.png" alt="">
-		</button>
-		<button class="systembutton perfectcenter" onclick="ondemobuttonclick()">
-			<img src="icons/system/home.png" alt="">
-		</button>
-		<button class="systembutton perfectcenter" style="width: 170px; margin-left: auto;" onclick="ondemobuttonclick()">
-			19 Dec 2020 13:35
-		</button>
-		<button class="systembutton perfectcenter" onclick="ondemobuttonclick()">
-			<img src="icons/system/mail.png" alt="">
-		</button>
-		<button class="systembutton perfectcenter" onclick="ondemobuttonclick()">
-			<img src="icons/system/call.png" alt="">
-		</button>
-		<button class="systembutton perfectcenter" onclick="ondemobuttonclick()">
-			<img src="icons/system/pencil.png" alt="">
-		</button>
-		<button class="systembutton perfectcenter" onclick="ondemobuttonclick()">
-			<img src="icons/system/Calculator.png" alt="">
-		</button>
-		<button class="systembutton perfectcenter" style="width: 170px;" onclick="ondemobuttonclick()">
-			<img src="icons/system/node.png" alt="">
-			Development Server
-		</button>
-		<button class="systembutton perfectcenter" style="width: 170px;" onclick="ondemobuttonclick()">
-			<img src="icons/system/spy.png" alt="">
-			Developer
-		</button>
-		<button class="systembutton perfectcenter" onclick="ondemobuttonclick()">
-			<img src="icons/system/logout.png" alt="">
-		</button>
-	</div>
+        <div id="grid-item-content" class="grid-item-content">
+			
+		</div>
+        <div class="grid-item-system">
+			<button class="systembutton perfectcenter" onclick="ondemobuttonclick()">
+				<img src="icons/system/menu.png" alt="">
+			</button>
+			<button class="systembutton perfectcenter" onclick="ondemobuttonclick()">
+				<img src="icons/system/search2.png" alt="">
+			</button>
+			<button class="systembutton perfectcenter" onclick="ondemobuttonclick()">
+				<img src="icons/system/history.png" alt="">
+			</button>
+			<button class="systembutton perfectcenter" onclick="ondemobuttonclick()">
+				<img src="icons/system/home.png" alt="">
+			</button>
+			<button class="systembutton perfectcenter" style="width: 170px; margin-left: auto;" onclick="ondemobuttonclick()">
+				19 Dec 2020 13:35
+			</button>
+			<button class="systembutton perfectcenter" onclick="ondemobuttonclick()">
+				<img src="icons/system/mail.png" alt="">
+			</button>
+			<button class="systembutton perfectcenter" onclick="ondemobuttonclick()">
+				<img src="icons/system/call.png" alt="">
+			</button>
+			<button class="systembutton perfectcenter" onclick="ondemobuttonclick()">
+				<img src="icons/system/pencil.png" alt="">
+			</button>
+			<button class="systembutton perfectcenter" onclick="ondemobuttonclick()">
+				<img src="icons/system/Calculator.png" alt="">
+			</button>
+			<button class="systembutton perfectcenter" style="width: 170px;" onclick="ondemobuttonclick()">
+				<img src="icons/system/node.png" alt="">
+				Development Server
+			</button>
+			<button class="systembutton perfectcenter" style="width: 170px;" onclick="ondemobuttonclick()">
+				<img src="icons/system/spy.png" alt="">
+				Developer
+			</button>
+			<button class="systembutton perfectcenter" onclick="ondemobuttonclick()">
+				<img src="icons/system/logout.png" alt="">
+			</button>	
+		</div>
+    </div>
 
 	<script>
 		function ondemobuttonclick(){
@@ -4079,13 +4091,13 @@
 		function moduleclicked(type, moduleno){
 			switch(type){
 				case "intro":
-					document.getElementById("content").innerHTML = `
+					document.getElementById("grid-item-content").innerHTML = `
 						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint minus enim distinctio voluptatibus exercitationem dolorum eos quae a velit. Voluptatum, at. Vel consectetur voluptatum odio ipsam eaque inventore hic quidem?</p>
 					`
 				break;
 				case "report":
 				case "module":
-					document.getElementById("content").innerHTML = `
+					document.getElementById("grid-item-content").innerHTML = `
 						<img class="siglescreenshot" src="screenshots/${moduleno}.png" alt="Screenshot">
 					`
 				break;
