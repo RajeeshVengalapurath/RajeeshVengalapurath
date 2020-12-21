@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="main.css?change_id=133">
+	<link rel="stylesheet" href="main.css?change_id=245">
 	<title>Document</title>
 </head>
 <body>
@@ -18,11 +18,12 @@
 			<div>
 				Software Developer (.NET Full Stack)
 			</div>
+			<div>rajeeshvengalapurath<img src="icons/at.png" alt="">gmail.com</div>
 			<div>
 				<a href="https://rajeeshvengalapurath.com/">rajeeshvengalapurath.com</a>
 			</div>
 		</div>
-        <div class="grid-item-menu">
+        <div id="grid-item-menu" class="grid-item-menu">
 			<div class="menumastermodule">
 				<div class="menumaster">
 					<div class="menumastericon">
@@ -4080,9 +4081,13 @@
 				<img src="icons/system/logout.png" alt="">
 			</button>	
 		</div>
-    </div>
+	</div>	
 
 	<script>
+		function backtomenubuttonclicked(){
+			document.getElementById("grid-item-menu").style.display = "block"
+			document.getElementById("grid-item-content").style.display = "none"
+		}
 		function ondemobuttonclick(){
 			alert("Demo")
 		}
@@ -4095,8 +4100,14 @@
 				break;
 				case "report":
 				case "module":
+
+					if(screen.width <= 869){
+						document.getElementById("grid-item-menu").style.display = "none"
+						document.getElementById("grid-item-content").style.display = "block"
+					}
 					document.getElementById("grid-item-content").innerHTML = `
-						<img class="siglescreenshot" src="screenshots/${moduleno}.png" alt="Screenshot">
+					<img class="siglescreenshot" src="screenshots/${moduleno}.png" alt="Screenshot">
+					<button id="backbutton" onclick="backtomenubuttonclicked()">Back</button>
 					`
 				break;
 			}
