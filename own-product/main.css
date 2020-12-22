@@ -15,9 +15,7 @@ body{
     align-items: center;
 }
 .grid-container{
-    display: grid;
-    grid-template-columns: 274px auto 274px;
-    grid-template-rows: 65px calc(100% - 105px) 40px;
+    display: grid;            
 
     /*full screen*/
     position: absolute;
@@ -28,6 +26,47 @@ body{
     /*full screen end*/
 }
 
+/*Big Screen*/
+@media (min-width: 870px){    
+    .grid-container{
+        grid-template-columns: 274px auto 274px;
+        grid-template-rows: 65px calc(100% - 105px) 40px;
+    }
+    .grid-item-content{
+        grid-column: 2/4;            
+    }
+    .grid-item-system{
+        grid-column: 1/4;
+        display: flex;
+        background-color: rgb(245, 246, 248);
+    }
+}
+
+/*Small Screen*/
+@media (max-width: 869px){
+    .grid-container{
+        grid-template-columns: auto;
+        grid-template-rows: 65px 65px 65px auto;
+    }
+    .grid-item-logo, .grid-item-content, .grid-item-menu, .grid-item-subtitle, .grid-item-title, .grid-item-system{
+        grid-column: 1/2;
+    }
+    .grid-item-title{
+        justify-content: center;
+        padding-left: 0;
+    }
+    .grid-item-subtitle{
+        padding-right: 0;
+    }
+    .grid-item-content{                
+        display: none; /*display: grid; on module select only by JS*/
+        grid-template-columns: 1;
+        grid-template-rows: calc(100% - 65px) 65px;
+    }
+    .grid-item-system{
+        display: none;
+    }
+}
 .grid-item-menu{
     overflow-y: scroll;
 
@@ -36,11 +75,6 @@ body{
     font-weight: normal;
 }
 
-.grid-item-system{
-    grid-column: 1/4;
-    display: flex;
-    background-color: rgb(245, 246, 248);
-}
 .grid-item-title{
     display: flex;
     align-items: center;
@@ -63,25 +97,7 @@ body{
     font-size: 12px;
     font-weight: normal;
 }
-@media (max-width: 869px){
-    .grid-container{
-        grid-template-columns: 100%;
-        grid-template-rows: 65px 65px 65px auto;
-    }
-    .grid-item-logo, .grid-item-content, .grid-item-menu, .grid-item-subtitle, .grid-item-title, .grid-item-system{
-        grid-column: 1/2;
-    }
-    .grid-item-title{
-        justify-content: center;
-        padding-left: 0;
-    }
-    .grid-item-subtitle{
-        padding-right: 0;
-    }
-    .grid-item-system, .grid-item-content{
-        display: none;
-    }
-}
+
 .logo{
     display: block;
     margin-left: auto;
@@ -99,13 +115,6 @@ body{
 }
 .systembutton:hover{
     background-color: gainsboro;
-}
-.grid-item-content{
-    grid-column: 2/4;
-
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: calc(100% - 40px) 40px;
 }
 .siglescreenshot{
     /* to fit image: along with .grid-item-content{overflow: hidden;}*/
@@ -155,4 +164,22 @@ body{
 }
 .moduletext a{
     text-decoration: none;
+}
+#whatisraptoroid, #inventory, #hospital, #hotel, #travels, #users{
+    padding: 24px;
+    overflow-y: scroll;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+#backbutton{
+    border: 0;
+    background-color: aliceblue;
+    padding: 0;
+
+    display: inline-flex;
+    justify-content: center; /* center the content horizontally */
+    align-items: center; /* center the content vertically */
+
 }
