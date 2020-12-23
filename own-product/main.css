@@ -36,7 +36,7 @@ body{
         grid-template-rows: 65px calc(100% - 105px) 40px;
     }
     .grid-item-content{
-        grid-column: 2/4;            
+        grid-column: 2/4;
     }
     .grid-item-system{
         grid-column: 1/4;
