@@ -25,6 +25,9 @@ body{
     right: 0;
     /*full screen end*/
 }
+.grid-item-title a{
+    text-decoration: none;
+}
 
 /*Big Screen*/
 @media (min-width: 870px){    
