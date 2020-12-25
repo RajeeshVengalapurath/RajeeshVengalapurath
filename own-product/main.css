@@ -80,6 +80,12 @@ body{
         display: flex;
         background-color: rgb(245, 246, 248);
     }
+    .stability{
+        display: none;
+    }
+    .samplescreen{
+        display: none;   
+    }
 }
 
 /*Small Screen*/
@@ -101,6 +107,34 @@ body{
         grid-template-rows: calc(100% - 65px) 65px;
     }
     .grid-item-title, .grid-item-system{
+        display: none;
+    }
+    .stability{
+        display: block;
+        background-image: url("images/stability.jpg");
+        background-size: 100vw auto;
+        color: white;
+        padding: 24px;
+        height: 100vw;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+    }
+    .samplescreen{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        height: 100vw;
+    }
+    .samplescreen img{
+        width: 100%;
+    }
+    #intromenu{
         display: none;
     }
 }
@@ -143,6 +177,7 @@ body{
     background-color: aliceblue;
     display: flex;
     align-items: center;
+    margin-bottom: 16px;
 }
 .menumastericon{
     width: 40px;
