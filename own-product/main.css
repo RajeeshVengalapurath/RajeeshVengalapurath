@@ -18,12 +18,13 @@ body{
     display: grid;            
 
     /*full screen*/
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
     /*full screen end*/
+
 }
 .grid-item-logo{
     background-color: rgb(0, 125, 184);
@@ -54,89 +55,6 @@ body{
 }
 .subtitletext{
     text-align: left;
-}
-
-/*Big Screen*/
-@media (min-width: 870px){    
-    .grid-container{
-        grid-template-columns: 274px auto 274px;
-        grid-template-rows: 65px calc(100% - 105px) 40px;
-    }
-    .grid-item-content{
-        grid-column: 2/4;
-    }
-    .grid-item-title{
-        display: flex;
-        align-items: center;
-    
-        padding-left: 24px;
-        
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 19px;
-        font-weight: normal;
-    }
-    .grid-item-system{
-        grid-column: 1/4;
-        display: flex;
-        background-color: rgb(245, 246, 248);
-    }
-    .stability{
-        display: none;
-    }
-    .samplescreen{
-        display: none;   
-    }
-}
-
-/*Small Screen*/
-@media (max-width: 869px){
-    .grid-container{
-        grid-template-columns: auto;
-        grid-template-rows: 65px 65px auto;
-    }
-    .grid-item-logo, .grid-item-content, .grid-item-menu, .grid-item-subtitle, .grid-item-title, .grid-item-system{
-        grid-column: 1/2;
-    }
-    /*.grid-item-title{
-        justify-content: center;
-        padding-left: 0;
-    }*/
-    .grid-item-content{                
-        display: none; /*display: grid; on module select only by JS*/
-        grid-template-columns: 1;
-        grid-template-rows: calc(100% - 65px) 65px;
-    }
-    .grid-item-title, .grid-item-system{
-        display: none;
-    }
-    .stability{
-        display: block;
-        background-image: url("images/stability.jpg");
-        background-size: 100vw auto;
-        color: white;
-        padding: 24px;
-        height: 100vw;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        text-align: center;
-    }
-    .samplescreen{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        height: 100vw;
-    }
-    .samplescreen img{
-        width: 100%;
-    }
-    #intromenu{
-        display: none;
-    }
 }
 .grid-item-menu{
     overflow-y: scroll;
@@ -228,7 +146,7 @@ body{
     padding: 0;
 
     display: inline-flex;
-    justify-content: center; /* center the content horizontally */
-    align-items: center; /* center the content vertically */
+    justify-content: center;
+    align-items: center; 
 
 }
