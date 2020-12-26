@@ -14,8 +14,6 @@
         display: none; /*display: grid; on module select only by JS*/
         grid-template-columns: 1;
         grid-template-rows: calc(100% - 65px) 65px; 
-
-        border: 1px dotted black;
     }
     .grid-item-title, .grid-item-system{
         display: none;

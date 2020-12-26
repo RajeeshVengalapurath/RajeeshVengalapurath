@@ -85,7 +85,7 @@ body{
 .siglescreenshot{
     /* to fit image: along with .grid-item-content{overflow: hidden;}*/
     max-width: 100%;
-    max-height: calc(100% - 40px);
+    max-height: 100%;
 }
 
 .menumastermodule{
@@ -112,7 +112,7 @@ body{
     display: flex;
     align-items: center;
     padding-left: 18px;
-    padding-top: 3px;
+    padding-top: 3px;    
     padding-bottom: 3px;    
 }
 .reportmodule{
