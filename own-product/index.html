@@ -17,7 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="main.css?change_id=338">
 	<link rel="stylesheet" href="bigscreen.css?change_id=10">
-	<link rel="stylesheet" href="smallscreen.css?change_id=30">
+	<link rel="stylesheet" href="smallscreen.css?change_id=41">
 	<title>Document</title>
 </head>
 <body>
@@ -4230,8 +4230,18 @@
 	</div>			
 
 	<script>
-		const introline = "Raptoroid is an ERP package built on .NET Framework using C# as the programming language. The data is managed with Microsoft SQL Server. It’s a Windows application having 8 major modules and approximately 500 sub-modules. It’s a proven solution for having many customers in India and overseas. And constantly being updated for better performance and having new features. The project is now being converted to comply with Clean-Architecture."
-		document.getElementById("mobileintrodiv").innerText = introline
+		const introline = `
+		<p>
+			Raptoroid is an ERP package built on .NET Framework using C# as the programming language. The data is managed with Microsoft SQL Server.
+		</p>
+		<p>
+			It’s a Windows application having 8 major modules and approximately 500 sub-modules. And a proven solution for having many customers in India and overseas.
+		</p>
+		<div id="projectstatus">
+			The project is now being converted to a web application with a Blazor front-end and a Clean-Architecture based .NET Core Web API back-end.
+		</div>`
+
+		document.getElementById("mobileintrodiv").innerHTML = introline
 
 		function backtomenubuttonclicked(){
 			document.getElementById("grid-item-menu").style.display = "block"
@@ -4269,8 +4279,9 @@
 					
 					document.getElementById("grid-item-content").innerHTML = 
 					`<div id="whatisraptoroid">
-						<h1>What is Raptoroid?</h1>
-						<p>` + introline + `. Following are the list of modules</p>
+						<h1>What is Raptoroid?</h1>` 
+						+ introline 
+						+ `<p>Following are the list of modules</p>
 						<ul>
 							<li>Inventory & Accounting</li>
 							<li>Accounts</li>

@@ -46,4 +46,14 @@
     #intromenu{
         display: none;
     }
+    #projectstatus{
+        background-color: rgb(0, 125, 184);
+        padding-left: 16px;
+        padding-right: 16px;
+        height: 65px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

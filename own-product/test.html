@@ -2,93 +2,58 @@
 <html lang="en">
 <head>
     <style>
-        *{
-            box-sizing: border-box;    
-            border: 1px dotted black;
-
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 12px;
-            font-weight: normal;
-        }
-        body{
-            margin: 0;
-        }
-        .perfectcenter{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .grid-container{
-            display: grid;            
-
-            /*full screen*/
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            /*full screen end*/
-        }
-
-        /*Big Screen*/
-        @media (min-width: 870px){
-            .grid-item-content{
-                grid-column: 2/4;            
-            }
-            .grid-container{
-                grid-template-columns: 274px auto 274px;
-                grid-template-rows: 65px calc(100% - 105px) 40px;
-            }
-            .grid-item-system{
-                grid-column: 1/4;                
-                display: flex;
-            }
-        }
-
-        /*Small Screen*/
         @media (max-width: 869px){
-            .grid-container{
-                grid-template-columns: auto;
-                grid-template-rows: 65px 65px 65px auto;
-            }
-            .grid-item-logo, .grid-item-content, .grid-item-menu, .grid-item-subtitle, .grid-item-title, .grid-item-system{
-                grid-column: 1/2;
-            }
-            .grid-item-title{
-                justify-content: center;
-            }            
-            .grid-item-system{
-                display: none;
-            }
-            .grid-item-content{                
-                display: none; /*display: grid; on module select only by JS*/
-                grid-template-columns: 1;
-                grid-template-rows: calc(100% - 40px) 40px;
-            }
-        }                
-        .grid-item-menu{
-            overflow-y: scroll;            
-            padding: 20px;
-        }
-        .grid-item-content{
-            padding: 20px;
-        }        
-        .grid-item-title{
-            display: flex;
-            align-items: center;
-        }
-        .grid-item-subtitle{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            *{
+                box-sizing: border-box;    
 
-        }        
-        .siglescreenshot{
-            /* to fit image: along with .grid-item-content{overflow: hidden;}*/
-            max-width: 100%;
-            max-height: calc(100% - 40px);
-        }        
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 12px;
+                font-weight: normal;
+            }
+            body{
+                margin: 0;
+            }
+            .perfectcenter{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .grid-container{
+                display: grid;            
+                grid-template-columns: 1;
+                grid-template-rows: 65px calc(100% - 65px);
+
+                /*full screen*/
+                position: fixed;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                /*full screen end*/
+
+                background-color: aliceblue;
+            }
+            .grid-item1{
+                overflow-y: scroll;
+            }
+            .grid-item2{
+                background-color: aliceblue;
+
+                display: none;
+                grid-template-columns: auto;
+                grid-template-rows: calc(100% - 65px) 65px;
+            }
+            .grid-item1-sub{
+                background-color: antiquewhite;
+                overflow-y: scroll;
+            }
+            .grid-item2-sub{
+                background-color: burlywood;
+                display: flex;    
+                justify-content: center;        
+                align-items: center;
+            }
+        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -97,64 +62,40 @@
 <body>
     
     <div class="grid-container">
-        <div class="grid-item-logo">
-            Logo
+        <div class="grid-item1">
+            grid-item1 <button onclick="buttonclicked()">click</button>
         </div>
-        <div class="grid-item-title">
-            Title
+        <div id="grid-item2" class="grid-item2">
+            <div class="grid-item1-sub">
+                grid-item1-sub
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, sit quia. Fuga asperiores nihil exercitationem, illum assumenda quasi nostrum earum soluta provident aperiam distinctio eaque, ipsa beatae, deleniti pariatur esse.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptatibus, voluptas eligendi rerum, omnis a, asperiores dolorem vitae voluptate deleniti qui? Architecto officia maiores quis consequatur, cumque aut temporibus est.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deserunt ullam repellendus nesciunt sapiente magni provident delectus, neque at iure itaque blanditiis soluta ducimus cum quo consectetur facilis eligendi adipisci.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro omnis maiores praesentium, illum, quaerat ipsam enim et mollitia, similique non vel asperiores nostrum fugiat cum eos nam incidunt illo quasi.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati magnam recusandae optio delectus adipisci provident eum cupiditate, deserunt labore hic cum natus. Non quod omnis ex aspernatur? Explicabo, ex sed.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, repellat aspernatur. Labore recusandae vel perferendis voluptate, illum facere saepe distinctio exercitationem libero ad vitae voluptates, quod commodi doloribus temporibus eaque!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
+            </div>
+            <button class="grid-item2-sub">grid-item2-sub</button>
         </div>
-        <div class="grid-item-subtitle">
-            Subtitle
-        </div>
-        <div id="grid-item-menu" class="grid-item-menu">
-            Menu
-            <button onclick="moduleclicked('module', '484')">Module</button>
-        </div>
-        <div id="grid-item-content" class="grid-item-content">
-            Content
-        </div>
-        <div class="grid-item-system">
-            System
-        </div>
-    </div>
-          
+    </div>              
     <script>
-		function backtomenubuttonclicked(){
-			document.getElementById("grid-item-menu").style.display = "block"
-            document.getElementById("grid-item-content").style.display = "none"
-		}
-		function ondemobuttonclick(){
-			alert("Demo")
-		}
-		function moduleclicked(type, moduleno){
-            alert(type+' ' +moduleno+ ' ' + window.innerWidth)
-			switch(type){
-				case "intro":
-					document.getElementById("grid-item-content").innerHTML = `
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint minus enim distinctio voluptatibus exercitationem dolorum eos quae a velit. Voluptatum, at. Vel consectetur voluptatum odio ipsam eaque inventore hic quidem?</p>
-					`
-				break;
-				case "report":
-				case "module":
-
-					if(window.innerWidth <= 869){
-						document.getElementById("grid-item-menu").style.display = "none"
-						document.getElementById("grid-item-content").style.display = "grid"
-                    }
-                    else
-                        document.getElementById("grid-item-content").style.display = "grid"
-                        
-					document.getElementById("grid-item-content").innerHTML = `
-					<img class="siglescreenshot" src="screenshots/${moduleno}.png" alt="Screenshot">
-                    `
-                    if(window.innerWidth <= 869)
-                        document.getElementById("grid-item-content").innerHTML += `
-                        <button id="backbutton" onclick="backtomenubuttonclicked()">Back</button>
-                        `
-				break;
-			}
-		}
+        function buttonclicked(){
+            document.getElementById("grid-item2").style.display="grid"
+        }
     </script>
-    
 </body>
 </html>
