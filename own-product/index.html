@@ -15,7 +15,7 @@
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="main.css?change_id=314">
+	<link rel="stylesheet" href="main.css?change_id=316">
 	<title>Document</title>
 </head>
 <body>
@@ -32,12 +32,11 @@
 				Software Developer (.NET Full Stack)<br>
 				rajeeshvengalapurath.com
 			</div>
-		</div>
-		
+		</div>		
         <div id="grid-item-menu" class="grid-item-menu">
 			<div class="stability">
 				<h1>What is Raptoroid?</h1>
-				Raptoroid is an ERP package built on .NET Framework with C# as the programming language. The data is managed with Microsoft SQL Server database. It’s a Windows application having 8 major modules and approximately 500 sub-modules. It’s a proven solution for having many customers in India and overseas. And constantly being updated for better performance and having new features. The project is being converted to comply with Clean-Architecture.
+				<div id="mobileintrodiv"></div>
 			</div>
 			<div class="samplescreen">
 				<img src="images/samplescreen.png" alt="">
@@ -4229,6 +4228,9 @@
 	</div>			
 
 	<script>
+		const introline = "Raptoroid is an ERP package built on .NET Framework using C# as the programming language. The data is managed with Microsoft SQL Server. It’s a Windows application having 8 major modules and approximately 500 sub-modules. It’s a proven solution for having many customers in India and overseas. And constantly being updated for better performance and having new features. The project is now being converted to comply with Clean-Architecture."
+		document.getElementById("mobileintrodiv").innerText = introline
+
 		function backtomenubuttonclicked(){
 			document.getElementById("grid-item-menu").style.display = "block"
 			document.getElementById("grid-item-content").style.display = "none"
@@ -4236,13 +4238,8 @@
 		function ondemobuttonclick(){
 			alert("Demo")
 		}
-		function moduleclicked(type, moduleno){
+		function moduleclicked(type, moduleno){			
 			switch(type){
-				case "intro":
-					document.getElementById("grid-item-content").innerHTML = `
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint minus enim distinctio voluptatibus exercitationem dolorum eos quae a velit. Voluptatum, at. Vel consectetur voluptatum odio ipsam eaque inventore hic quidem?</p>
-					`
-				break;
 				case "report":
 				case "module":
 					if(window.innerWidth <= 869){
@@ -4271,9 +4268,7 @@
 					document.getElementById("grid-item-content").innerHTML = 
 					`<div id="whatisraptoroid">
 						<h1>What is Raptoroid?</h1>
-						<p>
-							Raptoroid is an ERP package built on .NET Framework with C# as the programming language. The data is managed with Microsoft SQL Server database. It’s a Windows application having 8 major modules and approximately 500 sub-modules. It’s a proven solution for having many customers in India and overseas. And constantly being updated for better performance and having new features. The project is being converted to comply with Clean-Architecture.
-						</p>
+						<p>` + introline + `. Following are the list of modules</p>
 						<ul>
 							<li>Inventory & Accounting</li>
 							<li>Accounts</li>
