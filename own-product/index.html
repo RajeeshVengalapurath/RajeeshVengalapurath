@@ -15,9 +15,10 @@
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="main.css?change_id=338">
-	<link rel="stylesheet" href="bigscreen.css?change_id=10">
-	<link rel="stylesheet" href="smallscreen.css?change_id=41">
+		
+	<link rel="stylesheet" href="main.css?change_id=411">
+	<link rel="stylesheet" href="bigscreen.css?change_id=18">
+	<link rel="stylesheet" href="smallscreen.css?change_id=53">
 	<title>Own Product | Rajeesh Vengalapurath | Software Developer (.NET Full Stack), Bangalore</title>
 </head>
 <body>
@@ -66,7 +67,67 @@
 			</div>
 			<!--Introduction Menu End-->
 
-			<!--Main Modules Menu-->
+			<!--Main Modules-->
+			<div id="mainmodulesflexcontainer">
+				<div id="mainmodules">
+					<div id="mainmodulescaption"><b>MAIN MODULES</b></div>
+
+					<button class="mainmodulesbutton" onclick="moduleclicked('inventory', '')">
+						<img class="mainmodulesimage" src="icons/applications/inventory16.png" alt="">
+						<div class="mainmodulestext">
+							Inventory & Accounts
+						</div>
+						<div class="mainmodulessubtext">
+							Purchase . Sales . Stock . Accounting . Billing
+						</div>
+					</button>
+					
+					<button class="mainmodulesbutton" onclick="moduleclicked('hospital', '')">
+						<img class="mainmodulesimage" src="icons/applications/hospital16.png" alt="">
+						<div class="mainmodulestext">
+							Hospital
+						</div>
+						<div class="mainmodulessubtext">
+							OP . Pharmacy . Lab
+						</div>
+					</button>					
+
+					<button class="mainmodulesbutton" onclick="moduleclicked('hotel', '')">
+						<img class="mainmodulesimage" src="icons/applications/hotel16.png" alt="">
+						<div class="mainmodulestext">
+							Hotel & Resort
+						</div>
+						<div class="mainmodulessubtext">
+							Rooms . Restaurant . Bar . Stock . Recipe . Accounting
+						</div>
+					</button>					
+
+					<button class="mainmodulesbutton" onclick="moduleclicked('travels', '')">
+						<img class="mainmodulesimage" src="icons/applications/travels16.png" alt="">
+						<div class="mainmodulestext">
+							Travel Agency
+						</div>
+						<div class="mainmodulessubtext">
+							Billing . Accounting
+						</div>
+					</button>					
+
+					<button class="mainmodulesbutton" onclick="moduleclicked('users', '')">
+						<img class="mainmodulesimage" src="icons/applications/users16.png" alt="">
+						<div class="mainmodulestext">
+							User Management
+						</div>
+						<div class="mainmodulessubtext">
+							Users . Role . Policies
+						</div>	
+					</button>
+					
+				</div>
+			</div>
+			
+			<!--Main Modules End-->
+
+			<!--Main Modules Menu
 			<div class="menumastermodule">
 				<div class="menumaster">
 					<div class="menumastericon">
@@ -119,8 +180,8 @@
 					</div>
 				</div>
 			</div>
-			<!--Main Modules Menu End-->
-	
+			Main Modules Menu End-->
+
 			<!--Common Functionalities Menu-->
 			<div class="menumastermodule">
 				<div class="menumaster">
@@ -4229,7 +4290,7 @@
 		</div>
 	</div>			
 
-	<script>
+	<script>		
 		const introline = `
 		<p>
 			Raptoroid is an ERP package built on .NET Framework using C# as the programming language. The data is managed with Microsoft SQL Server.

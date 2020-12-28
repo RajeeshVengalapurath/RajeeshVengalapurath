@@ -150,3 +150,50 @@ body{
     align-items: center; 
 
 }
+#mainmodulesflexcontainer{
+    background-color: rgb(0, 125, 184);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mainmodules{
+    width: 100%;
+    padding: 16px;
+    display: grid;
+    gap: 10px;
+}
+.mainmodulesbutton{
+    color: white;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+
+    display: grid;
+    grid-template-columns: 24px 1fr;    
+
+    padding: 0;
+}
+#mainmodulescaption{
+    color: black;
+}
+.mainmodulesimage{
+    grid-column: 1/2;
+}
+.mainmodulestext{
+    grid-column: 2/3;
+    text-align: left;
+    text-decoration-line:underline;
+}
+.mainmodulessubtext{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+
+    text-align: left;
+    grid-column: 2/3;
+}
