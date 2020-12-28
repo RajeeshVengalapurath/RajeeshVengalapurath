@@ -197,3 +197,11 @@ body{
     text-align: left;
     grid-column: 2/3;
 }
+#screenshotsstart{
+    height: 40px;
+    color: rgb(0, 125, 184);   
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
