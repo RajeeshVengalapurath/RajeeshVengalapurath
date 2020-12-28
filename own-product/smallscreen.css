@@ -20,7 +20,8 @@
     }
     .stability{
         display: block;
-        background-image: url("images/code.png?random=1");
+        background-image: url("images/stability.jpg?random=1");
+        background-color: black;
         background-size: 100vw auto;
         color: white;
         padding: 24px;
