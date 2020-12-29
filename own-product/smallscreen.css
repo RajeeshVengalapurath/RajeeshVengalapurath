@@ -20,7 +20,7 @@
     }
     .stability{
         display: block;
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/code.png?random=3');
+        background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('images/raptoroidlogosmallscreen.jpg');
         background-color: black;
         background-size: 100vw auto;
         color: white;
@@ -47,14 +47,8 @@
     #intromenu{
         display: none;
     }
-    #projectstatus{
-        background-color: rgb(0, 125, 184);
-        padding-left: 16px;
-        padding-right: 16px;
-        height: 65px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    
+    #whatisraptoroidbigscreen{
+        display: none;
     }
 }
