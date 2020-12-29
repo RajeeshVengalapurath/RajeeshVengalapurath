@@ -1,0 +1,207 @@
+*{
+    box-sizing: border-box;    
+    /*border: 1px dotted black;*/
+}
+a:visited 
+{
+    color: black;
+}
+body{
+    margin: 0;
+}
+.perfectcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-container{
+    display: grid;            
+
+    /*full screen*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    /*full screen end*/
+
+}
+.grid-item-logo{
+    background-color: rgb(0, 125, 184);
+}
+.grid-item-subtitle a{
+    text-decoration: none;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+.grid-item-subtitle{
+    background-color: black;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+
+}
+.grid-item-title{
+    background-color: black;
+    color: white;
+}
+.subtitletext{
+    text-align: left;
+}
+.grid-item-menu{
+    overflow-y: scroll;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.systembutton {
+    width: 40px;
+    height: 40px;
+    border: 0px;
+    background-color: rgb(245, 246, 248);
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+.systembutton:hover{
+    background-color: gainsboro;
+}
+.siglescreenshot{
+    /* to fit image: along with .grid-item-content{overflow: hidden;}*/
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.menumastermodule{
+    margin-bottom: 16px;
+}
+.menumaster{
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.menumastericon{
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.modules{
+    display: flex;
+    flex-direction: column;
+}
+.module{
+    display: flex;
+    align-items: center;
+    padding-left: 18px;
+    padding-top: 3px;    
+    padding-bottom: 3px;    
+}
+.reportmodule{
+    padding-left: 40px;
+}
+.moduleicon{
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.moduletext{
+    padding-left: 6px;
+    cursor: pointer;
+}
+.moduletext a{
+    text-decoration: none;
+}
+#whatisraptoroid, #inventory, #hospital, #hotel, #travels, #users{
+    padding: 24px;
+    overflow-y: scroll;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+#backbutton{
+    border: 0;
+    background-color: aliceblue;
+    padding: 0;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; 
+
+}
+#mainmodulesflexcontainer{
+    background-color: rgb(0, 125, 184);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mainmodules{
+    width: 100%;
+    padding: 16px;
+    display: grid;
+    gap: 10px;
+}
+.mainmodulesbutton{
+    color: white;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+
+    display: grid;
+    grid-template-columns: 24px 1fr;    
+
+    padding: 0;
+}
+#mainmodulescaption{
+    color: black;
+}
+.mainmodulesimage{
+    grid-column: 1/2;
+}
+.mainmodulestext{
+    grid-column: 2/3;
+    text-align: left;
+    text-decoration-line:underline;
+}
+.mainmodulessubtext{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+
+    text-align: left;
+    grid-column: 2/3;
+}
+#screenshotsstart{
+    height: 40px;
+    color: rgb(0, 125, 184);   
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

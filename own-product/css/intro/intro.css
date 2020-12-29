@@ -1,0 +1,50 @@
+#introimagetext{
+    width: 100%;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    text-align: center;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+#introimagetext_header{
+    font-size: 19px;
+    font-weight: bold;
+}
+#introprojectstatus{
+    background-color: rgb(0, 125, 184);
+    height: 65px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+#intoscreenshot{
+    width: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /*background-image: url('../../images/samplescreen.png?random=3');
+    background-position: center;
+    background-repeat: no-repeat;*/
+}

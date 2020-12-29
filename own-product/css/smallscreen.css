@@ -1,0 +1,54 @@
+@media (max-width: 869px){
+    .grid-container{        
+        grid-template-columns: auto;
+        grid-template-rows: 65px 65px calc(100% - 130px);
+    }
+    .grid-item-logo, .grid-item-content, .grid-item-menu, .grid-item-subtitle, .grid-item-title, .grid-item-system{
+        grid-column: 1/2;
+    }
+    /*.grid-item-title{
+        justify-content: center;
+        padding-left: 0;
+    }*/
+    .grid-item-content{                
+        display: none; /*display: grid; on module select only by JS*/
+        grid-template-columns: 1;
+        grid-template-rows: calc(100% - 65px) 65px; 
+    }
+    .grid-item-title, .grid-item-system{
+        display: none;
+    }
+    .stability{
+        display: block;
+        background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('../images/raptoroidlogosmallscreen.jpg');
+        background-color: black;
+        background-size: 100vw auto;
+        color: white;
+        padding: 24px;
+        height: 100vw;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+    }
+    .samplescreen{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        height: 100vw;
+    }
+    .samplescreen img{
+        width: 100%;
+    }
+    #intromenu{
+        display: none;
+    }
+    
+    #whatisraptoroidbigscreen{
+        display: none;
+    }
+}

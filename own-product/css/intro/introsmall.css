@@ -1,0 +1,23 @@
+@media (max-width: 869px){
+    #introimagetext{
+        height: 100vw;
+        background-image: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) )
+            , url('../../images/raptoroidlogosmallscreen.jpg?random=1');
+        background-size: 100vw auto;
+
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    #intoscreenshot{
+        height: 100vw;
+        background-image: url('../../images/samplescreensmall.png?random=5');
+        background-size: 100%;
+    }
+    #introprojectstatus{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    #introfurther{
+        display: none;
+    }
+}

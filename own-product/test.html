@@ -2,58 +2,20 @@
 <html lang="en">
 <head>
     <style>
-        @media (max-width: 869px){
-            *{
-                box-sizing: border-box;    
+        *{
+            box-sizing: border-box;    
 
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                font-size: 12px;
-                font-weight: normal;
-            }
-            body{
-                margin: 0;
-            }
-            .perfectcenter{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .grid-container{
-                display: grid;            
-                grid-template-columns: 1;
-                grid-template-rows: 65px calc(100% - 65px);
-
-                /*full screen*/
-                position: fixed;
-                left: 0;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                /*full screen end*/
-
-                background-color: aliceblue;
-            }
-            .grid-item1{
-                overflow-y: scroll;
-            }
-            .grid-item2{
-                background-color: aliceblue;
-
-                display: none;
-                grid-template-columns: auto;
-                grid-template-rows: calc(100% - 65px) 65px;
-            }
-            .grid-item1-sub{
-                background-color: antiquewhite;
-                overflow-y: scroll;
-            }
-            .grid-item2-sub{
-                background-color: burlywood;
-                display: flex;    
-                justify-content: center;        
-                align-items: center;
-            }
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 12px;
+            font-weight: normal;
         }
+        body{
+            margin: 0;
+        }
+
+        
+
+            
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,41 +23,30 @@
 </head>
 <body>
     
-    <div class="grid-container">
-        <div class="grid-item1">
-            grid-item1 <button onclick="buttonclicked()">click</button>
-        </div>
-        <div id="grid-item2" class="grid-item2">
-            <div class="grid-item1-sub">
-                grid-item1-sub
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, sit quia. Fuga asperiores nihil exercitationem, illum assumenda quasi nostrum earum soluta provident aperiam distinctio eaque, ipsa beatae, deleniti pariatur esse.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptatibus, voluptas eligendi rerum, omnis a, asperiores dolorem vitae voluptate deleniti qui? Architecto officia maiores quis consequatur, cumque aut temporibus est.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deserunt ullam repellendus nesciunt sapiente magni provident delectus, neque at iure itaque blanditiis soluta ducimus cum quo consectetur facilis eligendi adipisci.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro omnis maiores praesentium, illum, quaerat ipsam enim et mollitia, similique non vel asperiores nostrum fugiat cum eos nam incidunt illo quasi.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati magnam recusandae optio delectus adipisci provident eum cupiditate, deserunt labore hic cum natus. Non quod omnis ex aspernatur? Explicabo, ex sed.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, repellat aspernatur. Labore recusandae vel perferendis voluptate, illum facere saepe distinctio exercitationem libero ad vitae voluptates, quod commodi doloribus temporibus eaque!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt voluptates fugiat illo earum perspiciatis quaerat omnis, eligendi suscipit error itaque nobis reprehenderit at ut harum iusto modi totam soluta? Cumque!</p>        
+    <div id="intro">
+        <div id="introimagetext">
+            <div id="introimagetext_header">What is Raptoroid?</div>
+            <div>
+                Raptoroid is an ERP package built on .NET Framework using C# as the programming language. The data is managed with Microsoft SQL Server.
             </div>
-            <button class="grid-item2-sub">grid-item2-sub</button>
+            <div>
+                It’s a Windows application having 8 major modules and approximately 500 sub-modules. And a proven solution for having many customers in India and overseas.
+            </div>
         </div>
-    </div>              
+        <div id="introprojectstatus">
+            The project is now being converted into a web application with a Blazor front-end and a Clean-Architecture based .NET Core Web API back-end.
+        </div>
+        <div id="intoscreenshot">
+
+        </div>
+        <div id="introfurther">
+            &#8592 To see more, select items from menu
+        </div>
+    </div>
+
     <script>
-        function buttonclicked(){
-            document.getElementById("grid-item2").style.display="grid"
-        }
+        
     </script>
+
 </body>
 </html>

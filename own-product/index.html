@@ -16,9 +16,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
-	<link rel="stylesheet" href="main.css?random=427">
-	<link rel="stylesheet" href="bigscreen.css?random=98">
-	<link rel="stylesheet" href="smallscreen.css?random=69">
+	<link rel="stylesheet" href="css/main.css?random=429">
+	<link rel="stylesheet" href="css/bigscreen.css?random=101">
+	<link rel="stylesheet" href="css/smallscreen.css?random=71">
+	
+	<link rel="stylesheet" href="css/intro/intro.css?random=11">
+	<link rel="stylesheet" href="css/intro/introbig.css?random=21">
+	<link rel="stylesheet" href="css/intro/introsmall.css?random=7	">
+
 	<title>Own Product | Rajeesh Vengalapurath | Software Developer (.NET Full Stack), Bangalore</title>
 </head>
 <body>
@@ -37,21 +42,16 @@
 			</div>
 		</div>		
         <div id="grid-item-menu" class="grid-item-menu">
-			<div class="stability">
-				<h1>What is Raptoroid?</h1>
-				<div id="mobileintrodiv"></div>
+			
+			<div id="introholdermobile">
+
 			</div>
-			<div id="projectstatus">
-				The project is now being converted into a web application with a Blazor front-end and a Clean-Architecture based .NET Core Web API back-end.
-			</div>
-			<div class="samplescreen">
-				<img src="images/samplescreen.png" alt="">
-			</div>
+
 			<!--Introduction Menu-->
 			<div id="intromenu" class="menumastermodule">
 				<div class="menumaster">
 					<div class="menumastericon">
-						<img src="icons/menus/information.png" alt="">
+						<img src="icons/menus/information.png?random=1" alt="">
 					</div>
 					<div class="menumastertext">
 						Introduction
@@ -62,7 +62,7 @@
 						<div class="moduleicon">
 							<img src="icons/modules/question.png" alt="">
 						</div>
-						<div class="moduletext" onclick="moduleclicked('whatisraptoroid', '')">
+						<div class="moduletext" onclick="moduleclicked('intro', '')">
 							What is Raptoroid?
 						</div>
 					</div>
@@ -266,7 +266,7 @@
 						<img src="icons/menus/top.png?random=2" alt="">
 					</div>
 					<div class="menumastertext">
-						Some Top Business Modules
+						Frequently Used Business Modules
 					</div>			
 				</div>
 				<div class="modules">
@@ -4322,24 +4322,7 @@
 			<!--Developer Menu End-->
 		</div>
         <div id="grid-item-content" class="grid-item-content">
-			<div id="whatisraptoroidbigscreen">
-				<div id="whatisraptoroidbigscreenintro">
-					<h1>What is Raptoroid?</h1>
-					<p>
-						Raptoroid is an ERP package built on .NET Framework using C# as the programming language. The data is managed with Microsoft SQL Server.
-					</p>
-					<p>
-						It’s a Windows application having 8 major modules and approximately 500 sub-modules. And a proven solution for having many customers in India and overseas.
-					</p>					
-				</div>
-				<div id="projectstatus">
-					The project is now being converted into a web application with a Blazor front-end and a Clean-Architecture based .NET Core Web API back-end.
-				</div>
-				<div id="whatisraptoroidbigscreenscreenshot">
-					
-				</div>
-				<div id="whatisraptoroidbigfurther">&#8592 To see more, select items from menu</div>
-			</div>
+
 		</div>
         <div class="grid-item-system">
 			<button class="systembutton perfectcenter" onclick="ondemobuttonclick()">
@@ -4382,18 +4365,36 @@
 			</button>	
 		</div>
 	</div>			
-
+	
 	<script>		
-		const introline = `
-		<p>
-			Raptoroid is an ERP package built on .NET Framework using C# as the programming language. The data is managed with Microsoft SQL Server.
-		</p>
-		<p>
-			It’s a Windows application having 8 major modules and approximately 500 sub-modules. And a proven solution for having many customers in India and overseas.
-		</p>
-		`
+		const introHtml = `
+		<div id="intro">
+			<div id="introimagetext">
+				<div id="introimagetext_header">What is Raptoroid?</div>
+				<div>
+					Raptoroid is an ERP package built on .NET Framework using C# as the programming language. The data is managed with Microsoft SQL Server.
+				</div>
+				<div>
+					It’s a Windows application having 8 major modules and approximately 500 sub-modules. And a proven solution for having many customers in India and overseas.
+				</div>
+			</div>
+			<div id="introprojectstatus">
+				The project is now being converted into a web application with a Blazor front-end and a Clean-Architecture based .NET Core Web API back-end.
+			</div>
+			<div id="intoscreenshot">
+			</div>			
+			<div id="introfurther">
+				&#8592 To see more, select items from menu
+			</div>
+		</div>`
 
-		document.getElementById("mobileintrodiv").innerHTML = introline
+		if(window.innerWidth <= 869){
+			document.getElementById("introholdermobile").innerHTML = introHtml
+		}
+		else{
+			document.getElementById("grid-item-content").style.display = "grid"
+			document.getElementById("grid-item-content").innerHTML = introHtml
+		}
 
 		function backtomenubuttonclicked(){
 			document.getElementById("grid-item-menu").style.display = "block"
@@ -4402,7 +4403,7 @@
 		function ondemobuttonclick(){
 			alert("Demo")
 		}
-		function moduleclicked(type, moduleno){			
+		function moduleclicked(type, moduleno){
 			switch(type){
 				case "report":
 				case "module":
@@ -4421,36 +4422,9 @@
 						<button id="backbutton" onclick="backtomenubuttonclicked()"><img src="icons/back16.png" alt="">Back to Menu</button>
 						`
 				break;
-				case "whatisraptoroid":
-					if(window.innerWidth <= 869){
-						document.getElementById("grid-item-menu").style.display = "none"
-						document.getElementById("grid-item-content").style.display = "grid"
-					}
-					else
-						document.getElementById("grid-item-content").style.display = "grid"
-					
-					document.getElementById("grid-item-content").innerHTML = 
-					`<div id="whatisraptoroid">
-						<h1>What is Raptoroid?</h1>` 
-						+ introline 
-						+ `<p>Following are the list of modules</p>
-						<ul>
-							<li>Inventory & Accounting</li>
-							<li>Accounts</li>
-							<li>Hotel & Resort</li>
-							<li>Restaurant</li>
-							<li>Clinic</li>
-							<li>Pharmacy</li>
-							<li>Medical Laboratory</li>
-							<li>Travel Agency</li>
-							<li>User Management</li>
-							<li>Custom Version</li>
-						</ul>
-					</div>`
-					if(window.innerWidth <= 869)
-						document.getElementById("grid-item-content").innerHTML += `
-						<button id="backbutton" onclick="backtomenubuttonclicked()"><img src="icons/back16.png" alt=""> Back to Menu</button>
-						`
+				case "intro": //Only for bigscreen
+					document.getElementById("grid-item-content").style.display = "grid"
+					document.getElementById("grid-item-content").innerHTML = introHtml
 				break;
 				case "inventory":
 					if(window.innerWidth <= 869){

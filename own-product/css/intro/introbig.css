@@ -1,0 +1,40 @@
+@media (min-width: 870px){
+    #intro{
+        overflow-y: scroll;
+        width: 100%;
+    }
+    #introimagetext{
+        height: 341px;
+
+        background-image: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) )
+            , url('../../images/raptoroidlogobigscreen.jpg?random=2');
+        /*background-size: 100vw auto;*/
+
+        padding-left: 19.1%;
+        padding-right: 19.1%;
+    }
+    #intoscreenshot{
+        height: 430px;
+        background-image: url('../../images/samplescreenbig.png?random=4');        
+        /*background-size: 100% auto;*/
+    }
+    #introprojectstatus{
+        padding-left: 19.1%;
+        padding-right: 19.1%;
+    }
+    #introfurther{
+        height: 40px;
+        color: rgb(0, 125, 184);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+
+
+        padding-left: 40px;
+    }
+}
