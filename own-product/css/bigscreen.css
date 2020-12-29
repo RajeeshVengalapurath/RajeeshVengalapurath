@@ -30,4 +30,13 @@
     #introholdermobile{
         display: none;
     }
+    #intromenu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 40px;
+        font-weight: bold;
+        cursor: pointer;
+    }
 }
