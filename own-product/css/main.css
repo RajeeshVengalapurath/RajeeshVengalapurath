@@ -55,6 +55,7 @@ body{
 }
 .subtitletext{
     text-align: left;
+    padding-left: 10px;
 }
 .grid-item-menu{
     overflow-y: scroll;
@@ -199,9 +200,13 @@ body{
 }
 #screenshotsstart{
     height: 40px;
-    color: rgb(0, 125, 184);   
+    color: white;
+    background-color: black;
     
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#dpimg{
+    display: block;
 }
