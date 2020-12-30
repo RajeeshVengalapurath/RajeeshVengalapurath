@@ -18,10 +18,6 @@
         background-image: url('../../images/samplescreenbig.png?random=5');
         /*background-size: 100% auto;*/
     }
-    #introprojectstatus{
-        padding-left: 19.1%;
-        padding-right: 19.1%;
-    }
     #introfurther{
         height: 40px;
         color: rgb(0, 125, 184);

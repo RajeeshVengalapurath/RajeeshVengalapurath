@@ -13,10 +13,10 @@
         background-image: url('../../images/samplescreensmall.png?random=6');
         background-size: 100%;
     }
-    #introprojectstatus{
+    /*#introprojectstatus{
         padding-left: 16px;
         padding-right: 16px;
-    }
+    }*/
     #introfurther{
         display: none;
     }

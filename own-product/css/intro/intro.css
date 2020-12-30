@@ -27,16 +27,27 @@
     background-color: rgb(0, 125, 184);
     height: 65px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
     color: white;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 12px;
     font-weight: normal;
+
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    grid-template-rows: 65px ;
+}
+#idea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#introprojectstatustext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-right: 10px;
 }
 #intoscreenshot{
     width: 100%;
