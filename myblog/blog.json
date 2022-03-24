@@ -1,4 +1,4 @@
 [
     {"postId":1, "title":"Love for the Woods", "dateAndTime":"2020-11-11T05:34:36.446Z", "hasImage":true, "content": "When Athul Nandaj stopped the car and told me \"take that shot\". I miss the woods, I miss the fresh air, I miss the mountains, I miss the trip.", "showOnHomePage": true},
-    {"postId":2, "title":"Research", "dateAndTime":"2020-11-11T05:34:36.446Z", "hasImage":true, "content": "Thanks Rajeev for being the inspiration and support for me to do the most extensive research.", "showOnHomePage": true}
+    {"postId":2, "title":"Research", "dateAndTime":"2020-11-11T05:34:36.446Z", "hasImage":false, "content": "Thanks Rajeev for being the inspiration and support for me to do the most extensive research.", "showOnHomePage": true}
 ]
